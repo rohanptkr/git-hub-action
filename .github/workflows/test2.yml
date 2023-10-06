@@ -1,9 +1,6 @@
 name: Install httpd
 
-on:
-  push:
-    branches:
-      - main
+on: [workflow_dispatch, push]
 
 jobs:
   InstallHttpd:
