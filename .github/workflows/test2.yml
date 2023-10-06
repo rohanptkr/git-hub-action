@@ -6,4 +6,4 @@ jobs:
   CreateTxtFile:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is a text file." >> /root/rohan/text.txt
+      - run: echo "This is a text file." >> /tmp/text.txt
