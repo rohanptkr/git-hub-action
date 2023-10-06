@@ -6,6 +6,7 @@ jobs:
   InstallHttpd:
     runs-on: ubuntu-latest
     steps:
+      - run: sudo which yum || sudo yum install yum -y
       - run: sudo yum update -y
       - run: sudo yum install -y httpd
       - run: sudo systemctl start httpd
