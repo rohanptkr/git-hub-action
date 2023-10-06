@@ -4,6 +4,6 @@ on: [workflow_dispatch, push]
 
 jobs:
   CreateTxtFile:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - run: echo "This is a text file." >> /tmp/text.txt
