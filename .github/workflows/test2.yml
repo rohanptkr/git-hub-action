@@ -3,7 +3,11 @@ name: Install httpd
 on: [workflow_dispatch, push]
 
 jobs:
-  CreateTxtFile:
+  install-httpd:
     runs-on: self-hosted
     steps:
-      - run: echo "This is a text file." >> /tmp/text.txt
+      - run: sudo yum update -y
+      - run: sudo yum install -y httpd
+      - run: sudo systemctl start httpd
+      - run: sudo systemctl enable httpd
+      - run: curl http://localhost:80/
