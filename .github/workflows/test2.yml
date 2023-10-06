@@ -3,16 +3,7 @@ name: Install httpd
 on: [workflow_dispatch, push]
 
 jobs:
-  InstallHttpd:
+  CreateTxtFile:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          if ! command -v yum; then
-            sudo yum install yum -y
-          fi
-
-      - run: sudo yum update -y
-      - run: sudo yum install -y httpd
-      - run: sudo systemctl start httpd
-      - run: sudo systemctl enable httpd
-      - run: curl http://localhost:80/
+      - run: echo "This is a text file." >> /root/rohan/text.txt
